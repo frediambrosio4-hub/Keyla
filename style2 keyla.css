@@ -1,0 +1,540 @@
+*{
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+   
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-snap-type: mandatory;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root{
+    animation: backwards;
+}
+
+body{
+    background-color: rgb(10, 9, 9);
+    color:white;
+}
+
+.flex{
+    display: flex;
+}
+
+.Logo{
+    color: white;
+    font-size: 1,5rem;
+    font-weight: 25px;
+}
+
+/* NAVBAR */
+.header{
+    position: fixed;
+    top: 0;
+    width:100% ;
+    z-index: 1000;
+    background:transparent;
+    color: #000;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav ul li a {
+    color: bisque;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav ul li a:hover{
+    color: pink;
+}
+
+.foto-perfil{
+    width: 260px;
+    height: 260px;
+    border: 5px solid pink;
+    border-radius: 50%;
+    margin-top: 20px;
+    animation: flutuar 3s infinite ease-in-out;
+}
+
+/* animação*/
+@keyframes flutuar{
+    0%{transform:translateY(0px) ;}
+   50%{transform: translateY(-15px);}
+    100%{transform: translateY(0px);}
+}
+
+/*Menu lateral fixo*/
+
+.Navegação {
+    position: fixed;
+    left: 0;
+    top:0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:15px 40px;
+    background: rgb(red, green, blue);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid pink; 
+    z-index: 100;
+}
+
+
+.Menu{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.Menu a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.Menu a:hover{
+    color: rgb(239, 77, 131);
+}
+
+.Menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.Menu li a:hover{
+    color:pink;
+}
+
+/* hover do Menu*/
+.Navegação-lateral ul li a:hover{
+    background: black;
+    color: pink;
+    text-replace: translateY(5px);
+}
+
+/* Movendo o site no centro*/
+body{
+    margin: center 220px;
+}
+
+h1, h2{
+    color: pink;
+}
+
+/* seções */
+section{
+    padding:12px 40px;
+}
+
+/* Iníncio */
+.Cabeçalho{
+    margin-top: 100px;
+}
+.Início{
+    margin-top: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap:40px;
+}
+
+/*Foto*/
+
+.Início-foto{
+     width: 45%;
+     border: 3px pink;
+}
+
+.Início-foto img{
+   width:100%;
+   height: 420px;
+   object-fit: cover;
+    border-radius: 20px;
+}
+
+/*texto*/
+.Início-texto {
+    width: 55%;
+}
+.Início-texto h1{
+    font-size: 2.5rem;
+    color:pink;
+}
+
+.Início-texto span{
+    color:pink;
+}
+
+/*Botão*/
+.btn{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 1px 20px;
+    background: pink;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+/* Sobre */
+.Sobre{
+     margin-top:80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+     padding:40px;
+     border: 2px solid pink;
+    border-radius: 20px;
+    background: #111;
+    box-shadow: 0 0 20px pink;
+    
+}
+
+.Sobre-texto{
+    width:60%;
+}
+
+.Sobre-texto h1{
+    color: pink;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.Sobre p{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/*Foto*/
+.Sobre-foto{
+    width: 40%;
+}
+
+.Sobre-foto img{
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Habilidades*/
+
+.Habilidades{
+    margin-top: 80px;
+    padding: 40px;
+}
+
+.Habilidades h2{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+/*grid*/
+.Habilidades-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10px,1fr));
+    gap: 30px;
+}
+
+/*card*/
+.Habilidades-card{
+    background: black;
+    padding:30px  20px;
+    border-radius: 20px;
+    border: 2px solid pink;
+    text-align: center;
+    transition:all  0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(193,137,177);
+}
+
+/*imagem*/
+.Habilidades-card img{
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+/*Efeito ao passar o mause*/
+.Habilidades-card:hover{
+         transform: translateY(-15px);
+         box-shadow: 0 15px 30px rgb(193, 137, 177);
+         background: #151515;
+}
+
+/*texto*/
+.Habilidades-card h3{
+    margin-bottom: 10px;
+}
+
+.Habilidades-card p{
+    font-size: 0,9rem;
+    line-height: 1.4;
+}
+   
+/*barra*/
+.barra{
+    width: 100%;
+    height: 22px;
+    background: #222;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+/*Progresso*/
+.Progresso{
+    height: 100%;
+    background:linear-gradient(90deg,rgb(224, 29, 62),pink) ;
+    border-radius: 12px;
+    text-align: right;
+    padding-right: 10px;
+    line-height: 22px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    animation: carregar 2s ease;
+}
+
+/*precentagen individuais*/
+.HTml{ width: 65%;}
+.CSS{width: 50%;}
+
+/*Animação*/
+@keyframes carregar{
+    from{ width: 0;}
+}
+
+/*Idiomas*/
+
+.Idiomas {
+    padding: 40px 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Idiomas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.Idioma-card {
+    background: linear-gradient(180deg, #1a1a1a, #0f0f0f);
+    border-radius: 15px;
+    padding: 25px 25px;
+    border-top: 5px solid pink;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+    transition: 0.4s;
+}
+
+.Idioma-card:hover {
+    transform: translateY(-15px);
+}
+
+.Idioma-card h3 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.Idioma-card span {
+    color: pink;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* barra */
+.barra {
+    margin-top: 35px;
+    width: 100%;
+    height: 8px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progresso {
+    height: 100%;
+    background: linear-gradient(90deg,pink, rgb(163, 45, 65));
+    border-radius: 10px;
+}
+
+/* níveis */
+.pt { width: 100%; }
+.en { width: 40%; }
+.ch { width: 60%; }
+
+
+/* projetos*/
+
+.Projetos .Container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap:40px;
+}
+
+/* Card dos projetos*/
+.card-Projeto{
+    background:rgba(red, green, blue, alpha);
+    padding: 30px;
+    border-radius: 20px;
+    border:2px solid pink;
+    text-align:center;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(193, 137, 177);
+}
+
+/* efeito ao passar o mause */
+.card-Projeto:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px pink;
+    background: rgba(red, green, blue, alpha);
+}
+
+/* Card dos projetos imagem*/
+
+.card-Projeto a img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+/* titulos*/
+.card-Projeto h3{
+    margin-bottom:20px;
+    color:pink;
+    font-size: 1.4rem;
+}
+
+/* descrição*/
+
+.card-Projeto p{
+    color:white;
+    margin-bottom: 10px;
+    font-size: 1rem; 
+}
+
+/* Botão dos projetos*/
+
+.btn-Projeto{
+    background: pink;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-Projetos:hover{
+    background: white;
+    transform: scale(1.05);
+}
+
+/* Galeria */
+.galeria{
+    margin-top: 1.5px;
+    padding: 40px;
+    text-align: center;
+}
+
+.galeria h1{
+    font-size: 3.5rem;
+    line-height: 1.1;
+     color: pink;
+    text-align: center;  
+    margin-bottom: 30px; 
+}
+
+.grid-galeria{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* card dos projetos*/
+.Foto-galeria{
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 300px;
+    border: 3px solid pink;
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    animation: aparecer 0.8s ease forwards;
+    box-shadow: 0 0 15px rgba(0, 255, 255,0,4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s;
+}
+
+@keyframes aparecer{
+    to{
+       opacity: 1;
+transform: translateY (0) scale(1) ;
+    }
+}
+
+/* Efeito ao passar o mause*/
+
+.Foto-galeria:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 30px pink;
+    border-color: pink;
+}
+
+/*Contactos*/
+.Contactos a{
+    display: inline-block;
+    margin-top: 10px;
+    padding:10px 20px;
+    background: #090909;
+    color:rgb(211, 154, 192);
+    text-decoration: none;
+    border-radius: 10px;
+    transition:0.3s;
+}
+
+.Contactos a:hover{
+    background: #e30c57;
+}
+
+/*Footer*/
+footer{
+    text-align: center;
+    padding: 20px;
+    background:transparent;
+}
+
+.title{
+    text-align: center;
+    font-size: 1.5rem;
+}
